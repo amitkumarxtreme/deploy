@@ -1,0 +1,11 @@
+<%- include("partials/header") -%> 
+<br />
+<form action="/verification" method="POST">
+    <input type="hidden" name="email" value=<%= Email %> > 
+    <label for="mobile">Mobile no: </label>
+    <input type="number" id="mobile" name="mobile">
+    <button type="submit" name="submit" value="verification">Send OTP</button>
+</form>
+
+
+<%- include("partials/footer") -%> 

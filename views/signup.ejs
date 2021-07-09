@@ -1,0 +1,91 @@
+<%- include("partials/header") -%> 
+<form action="/signup" method="POST">
+    <div class="form-row">
+         <div class="col-md-2">
+          <label>Name: </label>
+         </div>
+        <div class="col-md-3">  
+                
+          <input type="text" class="form-control" placeholder="First name" name="FirstName">
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Middle name" name="MiddleName">
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="Last name" name="LastName">
+        </div>
+      </div>
+
+    <br />  
+
+    <div class="form-group row">
+      <br />  
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" name="email">
+      </div>
+    </div>
+    
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" name="password">
+          </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Confirm Password</label>
+          <input type="password" class="form-control" id="inputPassword4" name="cnfpassword">
+        </div>
+      </div>
+
+     
+ 
+   
+     
+    <div>
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday">
+    </div>
+
+   
+
+      <div class="input-group mb-3">
+        <br />
+        <label class="input-group-text" for="inputGroupSelect01">Education:   </label>
+        <select class="form-select" id="inputGroupSelect01" name="Education">
+          <option selected>Choose...</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="BCA">BCA</option>
+          <option value="BBA">BBA</option>
+          <option value="B.Sc.">B.Sc.</option>
+          <option value="B.Com">B.Com.</option>
+          <option value="B.A.">B.A.</option>
+        </select>
+      </div>
+
+       <div class="col-12">
+        <br />  
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Street,House Number..." name="Address">
+      </div>
+
+      <div class="input-group mb-3">
+        <br />  
+        <label class="input-group-text" for="inputGroupFile02">Attachments</label>
+        <input type="file" class="form-control" id="inputGroupFile02" name="fileName">
+        
+      </div>
+
+      
+
+      
+<br />
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary" name="submit" value="signup">Next</button>
+        </div>
+      </div>
+   
+</form>
+
+<%- include("partials/footer") -%> 

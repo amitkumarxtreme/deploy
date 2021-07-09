@@ -1,0 +1,43 @@
+<%- include("partials/header") -%>
+
+<%  if(stat === "basic"){  %>
+<form action="/address" method="POST">
+    <input type="hidden" name="email"  value=<%= Email %> > 
+    <input type="hidden" name="mobile"  value=<%= mobile %> > 
+    <label for="pin">PIN Code : </label>
+    <input type="number" id="pin" name="pincode">
+    <button type="submit" name="submit" value="PIN">Go</button>
+</form>
+<%  } else if(stat === "advance") {   %>
+<form action="/" method="POST">
+    <div>
+        <input type="hidden" name="email"  value=<%= Email %> > 
+        <input type="hidden" name="mobile"  value=<%= mobile %> > 
+        
+    <label for="pin">PIN Code : </label>    
+    <input type="number" id="pin" name="pincode" placeholder=<%= location.Pincode %> value=<%= location.Pincode %> disabled>
+    </div>
+    <br />
+    <div>
+    <label for="city">CITY : </label>
+    <input type="text" id="city" name="City" placeholder=<%= location.District %> value=<%= location.District %> disabled>
+    </div>
+    <br />
+    <div>
+    <label for="city">STATE : </label>
+    <input type="text" id="city" name="State" placeholder=<%= location.State %> value=<%= location.State %> disabled>
+    </div>
+    <br />
+    <div>
+    <label for="city">COUNTRY : </label>
+    <input type="text" id="city" name="Country" placeholder=<%= location.Country %> value=<%= location.Country %> disabled>
+     </div>
+    <br />
+    <div>
+        <button type="submit" class="btn btn-primary" name="submit" value="Signup">SignUp</button>
+    </div>
+<% }  %>
+
+
+
+<%- include("partials/footer") -%> 
